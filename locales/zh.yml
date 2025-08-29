@@ -1,0 +1,116 @@
+home:
+  categories:
+    newestTools: '最新工具'
+    favoriteTools: '我的收藏'
+    allTools: '全部工具'
+    favoritesDndToolTip: '拖放重新排列收藏夹'
+  subtitle: '一站式APP开发框架工具包'
+
+  toggleMenu: '切换菜单'
+  home: '主页'
+  support: '支持 IT 工具开发'
+  buyMeACoffee: '赞助'
+  follow:
+    title: '关注我们'
+    p1: '给我们 Star'
+    githubRepository: 'GitHub 仓库'
+    p2: ''
+    thankYou: '感谢您的支持！'
+  nav:
+    github: 'GitHub 仓库'
+    githubRepository: 'GitHub 仓库'
+    about: '关于 ccframe-tools'
+    aboutLabel: '关于'
+    darkMode: '深色模式'
+    lightMode: '浅色模式'
+    mode: '颜色模式'
+about:
+  content: >
+    # 关于 ccframe-tools
+
+    ## 技术
+
+    ccframe-tools 采用 Vue.js（Vue 3）和 Naive UI 组件库开发。某些工具使用了第三方开源库，您可以在仓库的 **package.json** 文件中找到完整的列表。
+
+    ## 发现了 Bug？缺少工具？
+
+    如果目前这里没有您需要的工具，并且您认为它可能有用，欢迎在 GitHub 仓库的 **issues** 中提交新增功能的请求。
+
+    如果您发现了 Bug，或者某些功能未能按预期工作，请在 GitHub 仓库的 **issues** 中提交错误报告。
+
+404:
+  notFound: '404 页面不存在'
+  sorry: '抱歉，该页面似乎不存在'
+  maybe: '也许缓存出现了一些问题，试试强制刷新页面？'
+  backHome: '返回主页'
+favoriteButton:
+  remove: '取消收藏'
+  add: '加入收藏'
+toolCard:
+  new: '新'
+search:
+  label: '搜索'
+  placeholder: 输入工具名称或命令...
+tools:
+  categories:
+    development: 开发工具
+    other: 其他工具
+
+  token-generator:
+    title: Token 生成器
+    description: 使用您想要的字符、大写或小写字母、数字和/或符号生成随机字符串。
+
+    uppercase: '大写 (ABC...)'
+    lowercase: '小写 (abc...)'
+    numbers: '数字 (123...)'
+    symbols: '符号 (!-;...)'
+    length: '长度'
+    tokenPlaceholder: '令牌...'
+    copied: 复制到剪贴板
+    button:
+      copy: 复制
+      refresh: 刷新
+
+  emoji-picker:
+    title: Emoji 选择器
+    description: 轻松复制和粘贴Emoji表情符号，并获得每个表情符号的unicode和code points值.
+
+  json-minify:
+    title: JSON 压缩
+    description: 通过删除不必要的空白来缩小和压缩JSON。
+
+  date-converter:
+    title: 日期时间转换器
+    description: 将日期和时间转换为各种不同的格式
+
+  json-prettify:
+    title: JSON美化和格式化
+    description: 将JSON字符串修饰为友好的可读格式。
+
+  jwt-parser:
+    title: JWT 解析器
+    description: 解析和解码JSON Web Token（jwt）并显示其内容。
+
+  math-evaluator:
+    title: 数学计算器
+    description: 计算数学表达式的计算器。您可以使用sqrt、cos、sin、abs等函数。
+
+  qrcode-generator:
+    title: 二维码生成器
+    description: 生成并下载url或文本的QR代码，并自定义背景和前景颜色。
+
+  uuid-generator:
+    title: UUIDs 生成器
+    description: 通用唯一标识符（UUID）是一个128位数字，用于标识计算机系统中的信息。可能的UUID数量为16^32，即2^128或约3.4x10^38（这是一个很大的数字！）。
+
+  text-diff:
+    title: 文本比较
+    description: 比较两个文本并查看它们之间的差异。
+
+  pdm-code-generator:
+    title: PDM代码生成器
+    description: 为ccframe框架从PDM文件生成JAVA后端代码。
+
+  regex-tester:
+    title: 正则表达式测试器
+    description: 使用示例文本测试您的正则表达式。

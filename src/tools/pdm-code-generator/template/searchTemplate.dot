@@ -1,0 +1,8 @@
+package <%= it.basePackage %>.<%= it.packageName %>.search;
+
+import <%= it.basePackage %>.<%= it.packageName %>.domain.entity.<%= it.entityName %>;
+import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
+
+public interface <%= it.entityName %>SearchRepository extends ElasticsearchRepository<<%= it.entityName %>, Long>{
+	
+}

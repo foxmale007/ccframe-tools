@@ -1,0 +1,9 @@
+package <%= it.basePackage %>.<%= it.packageName %>.mapper;
+
+import org.ccframe.commons.base.CcBaseMapper;
+import <%= it.basePackage %>.<%= it.packageName %>.domain.entity.<%= it.entityName %>;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface <%= it.entityName %>Mapper extends CcBaseMapper<<%= it.entityName %>> {
+}

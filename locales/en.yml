@@ -1,0 +1,115 @@
+home:
+  categories:
+    newestTools: Newest tools
+    favoriteTools: 'Your favorite tools'
+    allTools: 'All the tools'
+    favoritesDndToolTip: 'Drag and drop to reorder favorites'
+  subtitle: 'Tools for app developers'
+  toggleMenu: 'Toggle menu'
+  home: Home
+  support: 'Support ccframe-tools development'
+  buyMeACoffee: 'Buy me a coffee'
+  follow:
+    title: 'You like ccframe-tools?'
+    p1: 'Give us a star on'
+    githubRepository: 'ccframe-tools GitHub repository'
+    p2: ''
+    thankYou: 'Thank you!'
+  nav:
+    github: 'GitHub repository'
+    githubRepository: 'ccframe-tools GitHub repository'
+    about: 'About  ccframe-tools'
+    aboutLabel: 'About'
+    darkMode: 'Dark mode'
+    lightMode: 'Light mode'
+    mode: 'Toggle dark/light mode'
+about:
+  content: >
+    # About ccframe-tools
+
+    ## Technologies
+
+    IT Tools is made in Vue.js (Vue 3) with the the Naive UI component library and is hosted and continuously deployed by Vercel. Third-party open-source libraries are used in some tools, you may find the complete list in the **package.json** file of the repository.
+
+    ## Found a bug? A tool is missing?
+
+    If you need a tool that is currently not present here, and you think can be useful, you are welcome to submit a feature request in the **issues section** in the GitHub repository.
+
+    And if you found a bug, or something doesn't work as expected, please file a bug report in the **issues section** in the GitHub repository.
+
+404:
+  notFound: '404 Not Found'
+  sorry: 'Sorry, this page does not seem to exist'
+  maybe: 'Maybe the cache is doing tricky things, try force-refreshing?'
+  backHome: 'Back home'
+favoriteButton:
+  remove: 'Remove from favorites' 
+  add: 'Add to favorites'
+toolCard:
+  new: New
+search:
+  label: Search
+  placeholder: Type to search a tool or a command...
+tools:
+  categories:
+    development: Development
+    other: Other
+
+  token-generator:
+    title: Token generator
+    description: Generate random string with the chars you want, uppercase or lowercase letters, numbers and/or symbols.
+
+    uppercase: Uppercase (ABC...)
+    lowercase: Lowercase (abc...)
+    numbers: Numbers (123...)
+    symbols: Symbols (!-;...)
+    length: Length
+    tokenPlaceholder: 'The token...'
+    copied: Token copied to the clipboard
+    button:
+      copy: Copy
+      refresh: Refresh
+
+  emoji-picker:
+    title: Emoji picker
+    description: Copy and paste emojis easily and get the unicode and code points value of each emoji.
+
+  json-minify:
+    title: JSON minify
+    description: Minify and compress your JSON by removing unnecessary whitespace.
+
+  date-converter:
+    title: Date-time converter
+    description: Convert date and time into the various different formats
+
+  json-prettify:
+    title: JSON prettify and format
+    description: Prettify your JSON string into a friendly, human-readable format.
+
+  jwt-parser:
+    title: JWT parser
+    description: Parse and decode your JSON Web Token (jwt) and display its content.
+
+  math-evaluator:
+    title: Math evaluator
+    description: A calculator for evaluating mathematical expressions. You can use functions like sqrt, cos, sin, abs, etc.
+
+  qrcode-generator:
+    title: QR Code generator
+    description: Generate and download a QR code for a URL (or just plain text), and customize the background and foreground colors.
+
+  uuid-generator:
+    title: UUIDs generator
+    description: A Universally Unique Identifier (UUID) is a 128-bit number used to identify information in computer systems. The number of possible UUIDs is 16^32, which is 2^128 or about 3.4x10^38 (which is a lot!).
+
+  text-diff:
+    title: Text diff
+    description: Compare two texts and see the differences between them.
+
+  pdm-code-generator:
+    title: PDM Code Generator
+    description: Generate java backend code from PDM files for ccframe framework.
+
+  regex-tester:
+    title: Regex Tester
+    description: Test your regular expressions with sample text.

@@ -1,0 +1,22 @@
+package <%= it.basePackage %>.<%= it.packageName %>.controller;
+
+import io.swagger.annotations.*;
+import org.apache.dubbo.config.annotation.DubboReference;
+import <%= it.basePackage %>.<%= it.packageName %>.domain.entity.<%= it.entityName %>;
+import <%= it.basePackage %>.<%= it.packageName %>.service.I<%= it.entityName %>SearchService;
+import <%= it.basePackage %>.<%= it.packageName %>.service.I<%= it.entityName %>Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("admin/<%= it.lowerFirst(it.entityName) %>")
+@Api("<%= it.name %> 相关 操作")
+public class <%= it.entityName %>Controller {
+
+    @DubboReference(check=false)
+    private I<%= it.entityName %>Service <%= it.lowerFirst(it.entityName) %>Service;
+
+    @DubboReference(check=false)
+    private I<%= it.entityName %>SearchService <%= it.lowerFirst(it.entityName) %>SearchService;
+
+}

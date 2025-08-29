@@ -1,0 +1,1 @@
+pnpm build --mode production

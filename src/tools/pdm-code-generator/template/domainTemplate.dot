@@ -1,0 +1,64 @@
+package <%= it.basePackage %>.<%= it.packageName %>.domain.entity;
+
+import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.dromara.autotable.annotation.*;
+import org.dromara.autotable.annotation.enums.IndexTypeEnum;
+import org.dromara.autotable.annotation.mysql.MysqlTypeConstant;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.ccframe.commons.base.BaseEntity;
+import org.ccframe.config.GlobalEx;
+import org.springframework.data.elasticsearch.annotations.*;
+
+import java.util.Date;
+
+/**
+ * @author JIM
+ * 
+ */
+@TableName("<%= it.key %>")
+@AutoTable("<%= it.key %>")<%~ it.indexs :item %>
+@TableIndex(name = "<%= item.key %>", type= IndexTypeEnum.<%? item.unique %>UNIQUE<%??%>NORMAL<%?%>, fields = {<%~ item.fields :idxFields:index %><%? index > 0 %>, <%?%><%= it.entityName %>.<%= idxFields.code %><%~%>})<%~%><%? it.genIndex %>
+@Document(indexName = "<%= it.entityName.toLowerCase() %>")
+@Setting(settingPath = GlobalEx.ES_DEFAULT_ANALYSER)<%?%>
+@Getter
+@Setter
+@ToString
+@ApiModel(description = "<%= it.name %>")
+public class <%= it.entityName %> extends BaseEntity{
+
+	private static final long serialVersionUID = 1L;
+
+<%~ it.fields :item %>	public static final String <%= item.code %> = "<%= it.camelCase(item.code) %>";  // <%= item.name %>
+<%~%>
+
+	@TableId(type = IdType.ASSIGN_ID)<%? it.genIndex %>
+	//elasticsearch
+	@org.springframework.data.annotation.Id
+	@Field(type = FieldType.Long)<%?%>
+	private Long <%= it.camelCase(it.keyField) %>;
+<%~ it.fields :item:index %><%? index > 0 %><%? item.dataType === 'datetime' %>
+	@AutoColumn(type = MysqlTypeConstant.DATETIME, notNull = true)<%? it.genIndex %>
+	//elasticsearch
+	@Field(type = FieldType.Date, format = DateFormat.custom, pattern = GlobalEx.ES_DATE_PATTERN)<%?%>
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = GlobalEx.STANDERD_DATE_FORMAT, timezone = GlobalEx.TIMEZONE)
+	protected Date <%= it.camelCase(item.code) %>;
+<%??%>
+	@AutoColumn(type = MysqlTypeConstant.<%= item.dataType.toUpperCase() %><%? item.length %>, length = <%= item.length %><%?%><%? item.mandatory %>, notNull = true<%?%>)<%? it.genIndex %>
+	@Field(type = FieldType.<%? item.javaType === 'String' %>Keyword<%??%><%= item.javaType %><%?%>)<%?%>
+	private <%= item.javaType %> <%= it.camelCase(item.code) %>;
+<%?%><%?%><%~%>
+
+	//---------索引字段---------
+
+	@Override
+	public Long getId() {
+		return get<%= it.entityName %>Id();
+	}
+
+}

@@ -1,0 +1,9 @@
+package <%= it.basePackage %>.<%= it.packageName %>.service;
+
+import org.ccframe.commons.base.BusinessException;
+import org.ccframe.commons.base.IBaseService;
+import <%= it.basePackage %>.<%= it.packageName %>.domain.entity.<%= it.entityName %>;
+
+public interface I<%= it.entityName %>Service extends IBaseService<<%= it.entityName %>> {
+
+}

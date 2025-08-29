@@ -1,0 +1,11 @@
+package <%= it.basePackage %>.<%= it.packageName %>.service;
+
+import org.apache.dubbo.config.annotation.DubboService;
+import org.ccframe.commons.base.BaseService;
+import <%= it.basePackage %>.<%= it.packageName %>.domain.entity.<%= it.entityName %>;
+import <%= it.basePackage %>.<%= it.packageName %>.mapper.<%= it.entityName %>Mapper;
+
+@DubboService
+public class <%= it.entityName %>Service extends BaseService<<%= it.entityName %>, <%= it.entityName %>Mapper> implements I<%= it.entityName %>Service {
+
+}

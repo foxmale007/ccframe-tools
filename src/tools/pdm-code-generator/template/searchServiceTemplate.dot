@@ -1,0 +1,13 @@
+package <%= it.basePackage %>.<%= it.packageName %>.service;
+
+import lombok.extern.log4j.Log4j2;
+import org.apache.dubbo.config.annotation.DubboService;
+import org.ccframe.commons.base.BaseSearchService;
+import <%= it.basePackage %>.<%= it.packageName %>.domain.entity.<%= it.entityName %>;
+import <%= it.basePackage %>.<%= it.packageName %>.search.<%= it.entityName %>SearchRepository;
+
+@DubboService
+@Log4j2
+public class <%= it.entityName %>SearchService extends BaseSearchService<<%= it.entityName %>, <%= it.entityName %>SearchRepository> implements I<%= it.entityName %>SearchService {
+
+}
