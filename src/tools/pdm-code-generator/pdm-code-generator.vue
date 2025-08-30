@@ -16,7 +16,7 @@ const pdmJson = ref<any>(null);
 const physicalDiagram = ref<any[]>([]);
 const diagramTables: Ref<any[]> = ref<any[]>([]);
 const checkedRowKeys = ref<Array<string | number>>([]);
-const genLog = ref<string[]>(['aa', 'bb']);
+const genLog = ref<string[]>([]);
 const packageName = ref('somepackage');
 const validationRules = [{ message: '输入小写字符', validator: (value: string) => /^[a-z]+$/.test(value) }];
 const canGenerate = computed(() => checkedRowKeys.value.length > 0 && /^[a-z]+$/.test(packageName.value));
